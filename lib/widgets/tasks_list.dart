@@ -25,7 +25,9 @@ class TasksList extends StatelessWidget {
         if (items.length > index) {
           return items[index];
         } else {
-          return Container();
+          return Container(
+              // child: const Text('할 일을 추가하세요'),
+              );
         }
       }),
       itemCount: items.length,

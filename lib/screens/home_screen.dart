@@ -29,9 +29,16 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        foregroundColor: Theme.of(context).focusColor,
+        foregroundColor: Colors.white,
         backgroundColor: Theme.of(context).primaryColor,
-        title: const Text('Done Done Dance'),
+        title: const Text(
+          'Done Done Dance',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 23,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
@@ -84,13 +91,13 @@ class DayTask extends StatelessWidget {
                   onDateChanged(yesterday);
                 },
                 icon: const Icon(Icons.chevron_left),
-                iconSize: 50,
+                iconSize: 45,
                 color: const Color(0xFF5AA566),
               ),
               Text(
                 '${date.year}년 ${date.month}월 ${date.day}일',
                 style: const TextStyle(
-                  fontSize: 20,
+                  fontSize: 18,
                   fontWeight: FontWeight.w600,
                   color: Color(0xFF5AA566),
                 ),
@@ -101,7 +108,7 @@ class DayTask extends StatelessWidget {
                   onDateChanged(tomorrow);
                 },
                 icon: const Icon(Icons.chevron_right),
-                iconSize: 50,
+                iconSize: 45,
                 color: const Color(0xFF5AA566),
               ),
             ],
