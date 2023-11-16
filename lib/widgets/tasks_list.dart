@@ -22,15 +22,25 @@ class TasksList extends StatelessWidget {
     return ListView.builder(
       key: ValueKey(date),
       itemBuilder: ((context, index) {
-        if (items.length > index) {
+        if (items.isEmpty) {
+          return Container(
+            alignment: Alignment.center,
+            padding: const EdgeInsets.all(16.0),
+            child: const Text(
+              '할 일을 추가하세요',
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          );
+        } else if (index < items.length) {
           return items[index];
         } else {
-          return Container(
-              // child: const Text('할 일을 추가하세요'),
-              );
+          return Container();
         }
       }),
-      itemCount: items.length,
+      itemCount: (items.isEmpty) ? 1 : items.length,
     );
   }
 }
