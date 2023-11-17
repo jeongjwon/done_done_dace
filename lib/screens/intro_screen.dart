@@ -1,4 +1,3 @@
-import 'package:done_done_dance/widgets/animated_image_switcher.dart';
 import 'package:flutter/material.dart';
 
 class IntroScreen extends StatelessWidget {
@@ -22,7 +21,6 @@ class IntroScreen extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
             ),
-            // AnimatedImageSwitcher(),
             Image.asset('images/bear_dancing2.gif'),
             const SizedBox(
               height: 60,
